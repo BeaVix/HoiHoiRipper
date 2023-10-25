@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="350.0" prefWidth="216.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="unfp.SpriteSelectViewController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="23.0" prefWidth="200.0" spacing="10.0" VBox.vgrow="NEVER">
+         <children>
+            <CheckBox fx:id="deselectCheckBox" mnemonicParsing="false" onAction="#deselect" text="Deselect all" />
+            <CheckBox fx:id="selectCheckBox" mnemonicParsing="false" onAction="#select" selected="true" text="Select all" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="5.0" top="5.0" />
+         </VBox.margin>
+      </HBox>
+      <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="300.0" prefWidth="150.0" VBox.vgrow="ALWAYS">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="301.0" prefWidth="214.0">
+               <children>
+                  <ListView fx:id="listView" layoutY="-3.0" prefHeight="295.0" prefWidth="216.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="-3.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <ButtonBar prefHeight="32.0" prefWidth="216.0">
+        <buttons>
+          <Button minWidth="39.0" mnemonicParsing="false" onAction="#cancel" prefHeight="24.0" text="Cancel" />
+            <Button layoutX="5.0" layoutY="15.0" minWidth="39.0" mnemonicParsing="false" onAction="#extractSprites" prefHeight="24.0" prefWidth="101.0" text="Extract" />
+        </buttons>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </ButtonBar>
+   </children>
+</VBox>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="400.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="unfp.FileDataViewController">
+    <center>
+        <SplitPane dividerPositions="0.5" minHeight="0.0" minWidth="0.0">
+            <items>
+                <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                <children>
+                        <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="100.0" HBox.hgrow="ALWAYS">
+                            <children>
+                                <fx:include fx:id="fileListInclude" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" source="file_list.fxml" />
+                            </children>
+                        </StackPane>
+                </children>
+                </HBox>
+                <fx:include fx:id="fileDataTabs" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" source="file_data_tabPane.fxml" />
+            </items>
+        </SplitPane>
+    </center>
+    <top>
+            <fx:include fx:id="toolbarInclude" source="toolbar.fxml" />
+    </top>
+    <bottom>
+    </bottom>
+</BorderPane>

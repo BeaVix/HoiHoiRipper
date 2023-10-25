@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+
+<TreeTableView fx:id="fileListTV" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="unfp.FileListController">
+   <columns>
+      <TreeTableColumn fx:id="nameColumn" prefWidth="75.0" text="Name" />
+      <TreeTableColumn fx:id="typeColumn" prefWidth="75.0" text="Type" />
+      <TreeTableColumn fx:id="sizeColumn" prefWidth="75.0" text="Size" />
+   </columns>
+</TreeTableView>
