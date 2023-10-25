@@ -1,5 +1,5 @@
 # HoiHoiRipper
----
+
 Extractor and converter program made for file formats found on the PlayStation 2 game *Ichigeki Sacchuu!! HoiHoi-San*. This project is a work in progress and there are plans to add more file formats in the future (hopefully).
 
 ## Supported file formats
