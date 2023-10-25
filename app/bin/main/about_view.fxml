@@ -20,7 +20,6 @@
             <Image url="@hoihoi.png" />
          </image>
       </ImageView>
-      <Hyperlink layoutX="106.0" layoutY="325.0" text="Github Page" />
       <Button fx:id="closeBtn" layoutX="120.0" layoutY="356.0" mnemonicParsing="false" onAction="#close" prefHeight="30.0" prefWidth="60.0" text="Close">
          <font>
             <Font size="12.0" />

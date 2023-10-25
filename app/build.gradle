@@ -35,7 +35,7 @@ testing {
 
 application {
     // Define the main class for the application.
-    mainClass = 'unfp.App'
+    mainClass = 'unfp.Main'
 }
 
 javafx {
