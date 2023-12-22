@@ -57,11 +57,10 @@ public class PSP extends Format{
         offset = offsetArr[0]+4;
         len = FileData.readInt(data, 4, offset, this.endOffset); //length of entries block
         nro = FileData.readInt(data, 8, offset+4, this.endOffset); //number of entries
-        fileNames = new ArrayList<String>(nro);
+        fileNames = new ArrayList<>(nro);
         //Gets all name entries in one string and splits them
         String bigStr = FileData.readString(data, len, offset+12, this.endOffset);
-        String[] names = new String[nro];
-        names = bigStr.split("\0", 0); //entries separated by null char
+        String[] names = bigStr.split("\0", 0); //entries separated by null char
         Collections.addAll(fileNames, names);
         this.fileNum = nro;
         this.fileNames = fileNames;
