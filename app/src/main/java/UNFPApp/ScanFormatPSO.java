@@ -7,7 +7,7 @@ import UFPLib.PSO;
 import java.io.IOException;
 
 public class ScanFormatPSO implements IScanFormat{
-    static private byte[] header = new byte[]{0x31, 0x4F, 0x53, 0x50}; //1OSP
+    static private final byte[] header = new byte[]{0x31, 0x4F, 0x53, 0x50}; //1OSP
 
     public IFormat scanFormat(IFormat f) throws IOException
     {

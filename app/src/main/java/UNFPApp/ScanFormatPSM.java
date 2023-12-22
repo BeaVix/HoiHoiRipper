@@ -7,7 +7,7 @@ import UFPLib.IFormat;
 import UFPLib.PSM;
 
 public class ScanFormatPSM implements IScanFormat{
-    static private byte[] header = new byte[]{0x31, 0x4D, 0x53, 0x50}; //1MSP
+    static private final byte[] header = new byte[]{0x31, 0x4D, 0x53, 0x50}; //1MSP
 
     /**
      * Checks if IFormat object is a valid PSM file.
@@ -15,7 +15,7 @@ public class ScanFormatPSM implements IScanFormat{
      * Otherwise, returns the IFormat.
      * @param f The IFormat object to scan
      * @return a PSM object or the same IFormat
-     * @throws IOException
+     * @throws IOException SeekableByteChannel reading failure
      */
     public IFormat scanFormat(IFormat f) throws IOException
     {
