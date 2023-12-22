@@ -1,6 +1,11 @@
 # Ignore Gradle project-specific cache directory
 .gradle
+
+# Ignore vscode settings
 .vscode
+
+# Ignore test output
+out.txt
 
 # Ignore Gradle build output directory
 build

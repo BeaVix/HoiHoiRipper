@@ -7,7 +7,7 @@ import UFPLib.IFormat;
 
 public class GetFormatService {
     private GetFormat getF;
-    private static IScanFormat[] formats = {new ScanFormatUFP(), new ScanFormatPSI(), new ScanFormatPSI3()};
+    private static IScanFormat[] formats = {new ScanFormatUFP(), new ScanFormatPSI(), new ScanFormatPSI3(), new ScanFormatPSP()};
 
     public GetFormatService()
     {

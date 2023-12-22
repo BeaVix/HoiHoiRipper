@@ -148,9 +148,10 @@ public class FileListController extends Controller{
     {
         for (IFormat file : fileList) {
             int id = model.getFiles().size();
-            model.getFiles().put(id, file);
             TreeItem<IFormat> root = new TreeItem<IFormat>(file);
-            if(file.getClass().getSimpleName().equals("UFP")){ //renders internal file structure
+            String type = file.getClass().getSimpleName(); 
+            model.getFiles().put(id, file);
+            if(type.equals("UFP")){ //renders internal file structure
                 UFP rootFile = (UFP)file;
                 Folder fs = rootFile.getFileSystem();
                 for (Folder child : fs.getFolderChildren()) {
@@ -162,9 +163,9 @@ public class FileListController extends Controller{
                     TreeItem<IFormat> fileItem = new TreeItem<IFormat>(cFile);
                     root.getChildren().add(fileItem);
                 }
-            }else if(file.getClass().getSimpleName().equals("PSI")){
+            }else if(type.equals("PSI")){
                 getImage((PSI)file);
-            }else if(file.getClass().getSimpleName().equals("PSI3")){
+            }else if(type.equals("PSI3")){
                 PSI3 psiFile = (PSI3)file;
                 getImage(psiFile);
             }else{
